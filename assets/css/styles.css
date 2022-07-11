@@ -320,6 +320,11 @@ h1, h2, h3, h4 {
   font-style: normal;
 }
 
+h1, h2 {
+  background-color: white;
+  color: black;
+}
+
 address a {
   color: white;
 }
@@ -336,21 +341,40 @@ address a:hover {
   color: black;
 }
 
+ul {
+  list-style-type: disc;
+}
+
 address a {
   display: block;
   padding: 0.5rem;
 }
 
+h2 {
+  margin-top: 0;
+}
+
+h1, h2 {
+  padding: 1rem;
+}
+
 figure {
-  border: 0.2rem solid white;
-  height: 40vw;
-  width: 40vw;
+  border: 0.5rem solid white;
+  height: 38.6vw;
+  width: 38.6vw;
+  box-sizing: border-box;
   border-radius: 50%;
+  overflow: hidden;
 }
 figure img {
   height: 40vw;
   width: 40vw;
   object-fit: cover;
+  object-position: -1.6rem -1.5rem;
+}
+
+section {
+  border: 0.5rem solid white;
 }
 
 body {

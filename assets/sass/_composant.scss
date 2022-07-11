@@ -5,14 +5,30 @@ address {
     } 
 }
 
+h2 {
+    margin-top: 0;
+}
+
+h1, h2 {
+    padding: 1rem;
+}
+
 figure {
-    border: .2rem solid white;
-    height: $portrait-size;
-    width: $portrait-size;
+    border: $border-size solid $color-primary;
+    height: $portrait-size *.965;
+    width: $portrait-size *.965;
+    box-sizing: border-box;
     border-radius: 50%;
+    overflow: hidden;
+
     img {
         height: $portrait-size;
-    width: $portrait-size;
+        width: $portrait-size;
         object-fit: cover;
+        object-position: -1.6rem -1.5rem;
     }
+}
+
+section {
+    border: $border-size solid $color-primary;
 }
