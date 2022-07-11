@@ -1,0 +1,41 @@
+body {
+
+}
+
+// large screen grid
+@media screen and (min-width: 1024px) {
+    body {
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: $portrait-size-large+2*$margin+2*$border-size 1fr;
+        grid-template-areas: 
+            "header header header"
+            "left main right";
+
+        header {
+            display: block;
+            grid-area: header;
+
+            height: $portrait-size-large+2*$margin+2*$border-size;
+
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            grid-template-areas: 
+            "left middle right";
+
+                figure {
+                    grid-area: left;
+                }
+
+                h1 {
+                    grid-area: middle;
+                    //padding-top: 100%;
+                }
+
+        }
+    }
+
+    main {
+        grid-area: main;
+    }
+  }

@@ -1,7 +1,11 @@
+body {
+    background-color: $color-secondary;
+}
+
 address {
    a {
         display: block;
-        padding: .5rem;
+        padding: 1rem;
     } 
 }
 
@@ -13,22 +17,59 @@ h1, h2 {
     padding: 1rem;
 }
 
-figure {
-    border: $border-size solid $color-primary;
-    height: $portrait-size *.965;
-    width: $portrait-size *.965;
-    box-sizing: border-box;
-    border-radius: 50%;
-    overflow: hidden;
+header {
+    height: $portrait-size-large+2*$margin+2*$border-size;
+    margin: $margin;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: "left right";
 
-    img {
+    figure {
+        justify-self: end;
+        grid-area: left;
+        border: $border-size solid $color-tertiary;
         height: $portrait-size;
         width: $portrait-size;
-        object-fit: cover;
-        object-position: -1.6rem -1.5rem;
+        margin: $margin;
+        box-sizing: border-box;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            height: $portrait-size;
+            width: $portrait-size;
+            object-fit: cover;
+            object-position: -.8rem -1.5rem;
+        }
     }
 }
 
+@media screen and (min-width: 1024px) {
+
+    header {
+        grid-area: header;
+        height: 1rem;
+
+        figure {
+            height: $portrait-size-large;
+            width: $portrait-size-large;
+
+            img {
+                height: $portrait-size-large;
+                width: $portrait-size-large;
+            }
+        }
+    }
+  }
+
 section {
     border: $border-size solid $color-primary;
+
+    margin: $margin;
+
+    overflow: hidden;
+
+    p, h2, h3 {
+        padding-left: 1rem;
+    }
 }
