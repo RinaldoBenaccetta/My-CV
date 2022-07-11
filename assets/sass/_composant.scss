@@ -1,0 +1,18 @@
+address {
+   a {
+        display: block;
+        padding: .5rem;
+    } 
+}
+
+figure {
+    border: .2rem solid white;
+    height: $portrait-size;
+    width: $portrait-size;
+    border-radius: 50%;
+    img {
+        height: $portrait-size;
+    width: $portrait-size;
+        object-fit: cover;
+    }
+}
